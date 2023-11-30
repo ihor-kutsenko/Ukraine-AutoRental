@@ -1,13 +1,25 @@
 {
   "files": {
-    "main.css": "/Ukraine-AutoRental/static/css/main.7acaea2f.css",
-    "main.js": "/Ukraine-AutoRental/static/js/main.88137869.js",
+    "main.css": "/Ukraine-AutoRental/static/css/main.da8b5e55.css",
+    "main.js": "/Ukraine-AutoRental/static/js/main.02d4419d.js",
+    "static/css/378.3ae89697.chunk.css": "/Ukraine-AutoRental/static/css/378.3ae89697.chunk.css",
+    "static/js/378.49835a85.chunk.js": "/Ukraine-AutoRental/static/js/378.49835a85.chunk.js",
+    "static/js/680.fab5839c.chunk.js": "/Ukraine-AutoRental/static/js/680.fab5839c.chunk.js",
+    "static/js/270.d396dfed.chunk.js": "/Ukraine-AutoRental/static/js/270.d396dfed.chunk.js",
+    "static/js/413.7087cb94.chunk.js": "/Ukraine-AutoRental/static/js/413.7087cb94.chunk.js",
+    "static/js/794.2f0fad3e.chunk.js": "/Ukraine-AutoRental/static/js/794.2f0fad3e.chunk.js",
     "index.html": "/Ukraine-AutoRental/index.html",
-    "main.7acaea2f.css.map": "/Ukraine-AutoRental/static/css/main.7acaea2f.css.map",
-    "main.88137869.js.map": "/Ukraine-AutoRental/static/js/main.88137869.js.map"
+    "main.da8b5e55.css.map": "/Ukraine-AutoRental/static/css/main.da8b5e55.css.map",
+    "main.02d4419d.js.map": "/Ukraine-AutoRental/static/js/main.02d4419d.js.map",
+    "378.3ae89697.chunk.css.map": "/Ukraine-AutoRental/static/css/378.3ae89697.chunk.css.map",
+    "378.49835a85.chunk.js.map": "/Ukraine-AutoRental/static/js/378.49835a85.chunk.js.map",
+    "680.fab5839c.chunk.js.map": "/Ukraine-AutoRental/static/js/680.fab5839c.chunk.js.map",
+    "270.d396dfed.chunk.js.map": "/Ukraine-AutoRental/static/js/270.d396dfed.chunk.js.map",
+    "413.7087cb94.chunk.js.map": "/Ukraine-AutoRental/static/js/413.7087cb94.chunk.js.map",
+    "794.2f0fad3e.chunk.js.map": "/Ukraine-AutoRental/static/js/794.2f0fad3e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.88137869.js"
+    "static/css/main.da8b5e55.css",
+    "static/js/main.02d4419d.js"
   ]
 }
