@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Ukraine-AutoRental/static/css/main.7acaea2f.css",
+    "main.js": "/Ukraine-AutoRental/static/js/main.88137869.js",
+    "index.html": "/Ukraine-AutoRental/index.html",
+    "main.7acaea2f.css.map": "/Ukraine-AutoRental/static/css/main.7acaea2f.css.map",
+    "main.88137869.js.map": "/Ukraine-AutoRental/static/js/main.88137869.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.88137869.js"
+  ]
+}
