@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const Button = ({ text, className, type }) => {
   return (
-    <button className={className} disabled={disabled} type={type}>
+    <button className={className} type={type}>
       {text}
     </button>
   );

@@ -11,7 +11,7 @@ const SvgIcon = ({ className, iconId, onClick }) => {
 
 export default SvgIcon;
 
-Svg.propTypes = {
+SvgIcon.propTypes = {
   className: PropTypes.string,
   iconId: PropTypes.string.isRequired,
   onClick: PropTypes.func,
