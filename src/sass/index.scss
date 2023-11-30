@@ -1,0 +1,46 @@
+@import '~modern-normalize/modern-normalize';
+@import './styles.scss';
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  color: $text-color;
+  font-weight: 400;
+  background-color: $background-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
