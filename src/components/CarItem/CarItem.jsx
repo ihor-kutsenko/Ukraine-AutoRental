@@ -31,7 +31,7 @@ const CarItem = ({ car }) => {
   return (
     <li key={id}>
       <div className={styles.wrapper}>
-        <img src={`${img}`} alt="" className={styles.img} />
+        <img src={img} alt="" className={styles.img} />
         <div className={styles.mainInfo}>
           <div>
             <span>{make} </span>
