@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { HOME_ROUTE, CATALOG_ROUTE, FAVORITES_ROUTE } from 'routes/routes';
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
         marginBottom: '20px',
       }}
     >
-      <NavLink to="/"> Logo</NavLink>
+      <NavLink to={HOME_ROUTE}> Logo</NavLink>
       <nav
         style={{
           display: 'flex',
@@ -18,9 +19,9 @@ const Header = () => {
           gap: '15px',
         }}
       >
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/catalog">Catalog</NavLink>
-        <NavLink to="/favorites">Favorites</NavLink>
+        <NavLink to={HOME_ROUTE}>Home</NavLink>
+        <NavLink to={CATALOG_ROUTE}>Catalog</NavLink>
+        <NavLink to={FAVORITES_ROUTE}>Favorites</NavLink>
       </nav>
     </div>
   );
