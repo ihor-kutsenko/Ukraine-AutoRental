@@ -1,7 +1,11 @@
+import { useState } from 'react';
+
 import Button from 'components/Button/Button';
+import SvgIcon from 'components/SvgIcon/SvgIcon';
 import styles from './CarItem.module.scss';
 
 const CarItem = ({ car }) => {
+  const [favorites, setFavorites] = useState(false);
   const {
     id,
     img,
@@ -29,33 +33,51 @@ const CarItem = ({ car }) => {
   };
 
   return (
-    <li key={id}>
+    <li key={id} className={styles.listItem}>
       <div className={styles.wrapper}>
-        <img src={img} alt="" className={styles.img} />
+        <div className={styles.imgWrapper}>
+          <img src={img} alt="" className={styles.img} />
+          <button
+            type="button"
+            className={styles.buttonSvg}
+            onClick={() => {
+              setFavorites(!favorites);
+            }}
+          >
+            {favorites ? (
+              <SvgIcon
+                className={styles.iconHeart}
+                iconId={'icon-heart-active'}
+              />
+            ) : (
+              <SvgIcon className={styles.iconHeart} iconId={'icon-heart'} />
+            )}
+          </button>
+        </div>
         <div className={styles.mainInfo}>
-          <div>
+          <div className={styles.modelInfo}>
             <span>{make} </span>
-            <span>{model}, </span>
+            <span className={styles.active}>{model}, </span>
             <span>{year}</span>
           </div>
           <span>{rentalPrice}</span>
         </div>
         <div className={styles.secondInfo}>
-          <div>
-            <span>{city} </span>
-            <span>{country} </span>
-            <span>{rentalCompany} </span>
+          <div className={styles.secondInfo__wrapper}>
+            <span className={styles.textInfo}>{city}</span>
+            <span className={styles.textInfo}>{country}</span>
+            <span className={styles.textInfo}>{rentalCompany}</span>
             <span>Premium</span>
           </div>
-          <div>
-            <span>{type} </span>
-            <span>{make} </span>
-            <span>{id} </span>
+          <div className={styles.secondInfo__wrapper}>
+            <span className={styles.textInfo}>{type}</span>
+            <span className={styles.textInfo}>{make}</span>
+            <span className={styles.textInfo}>{id}</span>
             <span>{getAccessoriesText()}</span>
           </div>
         </div>
-        <Button text="Learn More" className={styles.button} />
-      </div>
+      </div>{' '}
+      <Button text="Learn More" type="button" className={styles.button} />
     </li>
   );
 };

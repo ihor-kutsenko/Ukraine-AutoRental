@@ -4,7 +4,6 @@ const CatalogPage = () => {
   return (
     <>
       <div>
-        Catalog Page
         <CarList />
       </div>
     </>
