@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/Ukraine-AutoRental/static/css/main.da8b5e55.css",
-    "main.js": "/Ukraine-AutoRental/static/js/main.b1a653ec.js",
+    "main.js": "/Ukraine-AutoRental/static/js/main.70957dd5.js",
     "static/css/378.3ae89697.chunk.css": "/Ukraine-AutoRental/static/css/378.3ae89697.chunk.css",
     "static/js/378.f74de27a.chunk.js": "/Ukraine-AutoRental/static/js/378.f74de27a.chunk.js",
     "static/js/794.2f0fad3e.chunk.js": "/Ukraine-AutoRental/static/js/794.2f0fad3e.chunk.js",
     "static/js/680.fab5839c.chunk.js": "/Ukraine-AutoRental/static/js/680.fab5839c.chunk.js",
     "static/css/781.31d6cfe0.chunk.css": "/Ukraine-AutoRental/static/css/781.31d6cfe0.chunk.css",
-    "static/js/781.3e77bef0.chunk.js": "/Ukraine-AutoRental/static/js/781.3e77bef0.chunk.js",
+    "static/js/781.864b9009.chunk.js": "/Ukraine-AutoRental/static/js/781.864b9009.chunk.js",
     "static/js/413.7087cb94.chunk.js": "/Ukraine-AutoRental/static/js/413.7087cb94.chunk.js",
     "index.html": "/Ukraine-AutoRental/index.html",
     "main.da8b5e55.css.map": "/Ukraine-AutoRental/static/css/main.da8b5e55.css.map",
-    "main.b1a653ec.js.map": "/Ukraine-AutoRental/static/js/main.b1a653ec.js.map",
+    "main.70957dd5.js.map": "/Ukraine-AutoRental/static/js/main.70957dd5.js.map",
     "378.3ae89697.chunk.css.map": "/Ukraine-AutoRental/static/css/378.3ae89697.chunk.css.map",
     "378.f74de27a.chunk.js.map": "/Ukraine-AutoRental/static/js/378.f74de27a.chunk.js.map",
     "794.2f0fad3e.chunk.js.map": "/Ukraine-AutoRental/static/js/794.2f0fad3e.chunk.js.map",
     "680.fab5839c.chunk.js.map": "/Ukraine-AutoRental/static/js/680.fab5839c.chunk.js.map",
-    "781.3e77bef0.chunk.js.map": "/Ukraine-AutoRental/static/js/781.3e77bef0.chunk.js.map",
+    "781.864b9009.chunk.js.map": "/Ukraine-AutoRental/static/js/781.864b9009.chunk.js.map",
     "413.7087cb94.chunk.js.map": "/Ukraine-AutoRental/static/js/413.7087cb94.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.da8b5e55.css",
-    "static/js/main.b1a653ec.js"
+    "static/js/main.70957dd5.js"
   ]
 }
