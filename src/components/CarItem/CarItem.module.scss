@@ -9,7 +9,7 @@
   height: 426px;
 
   border-radius: 12px;
-  transition: transform 250ms linear;
+  transition: transform $transition;
   transform: scale(1);
   @include hover {
     transform: scale(1.05);
@@ -36,7 +36,7 @@
   width: 18px;
   height: 18px;
   stroke: rgba(255, 255, 255, 0.8);
-  transition: scale 250ms linear;
+  transition: scale $transition;
   @include hover {
     scale: 1.3;
   }

@@ -1,0 +1,19 @@
+@import '../../sass/styles.scss';
+
+.buttonLoadMore {
+  display: flex;
+  margin: 0 auto;
+  background-color: transparent;
+  border: transparent;
+  text-decoration: underline;
+  @include font(16px, 500, 1.5);
+  font-size: 16px;
+  color: $accent-color;
+  transition: color $transition, transform $transition;
+  transform: scale(1);
+
+  @include hover {
+    color: $hovered-color;
+    transform: scale(1.2);
+  }
+}

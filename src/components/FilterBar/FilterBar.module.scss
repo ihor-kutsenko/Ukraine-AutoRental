@@ -1,0 +1,111 @@
+@import '../../sass/styles.scss';
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  gap: 18px;
+}
+
+.labelText {
+  margin-bottom: 8px;
+  display: flex;
+  @include font(14px, 500, 1.29);
+  color: #8a8a89;
+}
+
+.select {
+  width: 224px;
+  height: 48px;
+  padding: 14px 18px 14px 18px;
+  @include font(18px, 500, 1.11);
+  text-align: start;
+  border: none;
+  border-radius: 14px;
+  outline: none;
+  background-color: #f7f7fb;
+  color: $text-color;
+
+  @include hover {
+    color: $accent-color;
+  }
+}
+
+.option {
+  height: 272px;
+  padding: 14px 8px 14px 18px;
+  outline: none;
+  border-radius: 14px;
+  @include font(16px, 500, 1.26);
+  border: 1px solid rgba(18, 20, 23, 0.05);
+  color: $text-color;
+  transition: background-color 0.3s ease;
+}
+
+.newSelect {
+  @extend .select;
+  min-width: 125px;
+}
+
+.inputWrapper {
+  display: flex;
+  position: relative;
+  height: 48px;
+}
+
+.inputLeft {
+  display: block;
+  padding-left: 0;
+  width: 160px;
+  height: 48px;
+  border: none;
+  border-right: 1px solid rgba(138, 138, 137, 0.2);
+  border-radius: 14px 0 0 14px;
+  outline: none;
+  text-indent: 72px;
+  @include font(18px, 500, 1.11);
+  color: rgba(18, 20, 23, 1);
+  background-color: #f7f7fb;
+}
+
+.inputRight {
+  @extend .inputLeft;
+  border-radius: 0px 14px 14px 0px;
+  border-right: none;
+  text-indent: 49px;
+}
+
+.spanLeft {
+  position: absolute;
+  display: block;
+  left: 20px;
+  top: 15px;
+  z-index: 9;
+  font-family: 'Manrope';
+  color: rgba(18, 20, 23, 1);
+  @include font(18px, 500, 1.11);
+}
+
+.spanRight {
+  @extend .spanLeft;
+  left: 180px;
+}
+
+.buttonSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 44px;
+  width: 136px;
+  height: 48px;
+  border-radius: 12px;
+  @include font(14px, 600, 1.43);
+  color: #fff;
+  background-color: $accent-color;
+  transition: background-color $transition;
+  @include hover {
+    background-color: $hovered-color;
+  }
+}

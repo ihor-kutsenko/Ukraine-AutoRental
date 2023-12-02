@@ -6,7 +6,7 @@ import { appRoutes } from 'routes/routes';
 const SharedLayout = lazy(() =>
   import('./components/SharedLayout/SharedLayout')
 );
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
           {appRoutes.map(({ path, element }) => (
             <Route key={path} path={path} element={element} />
           ))}
-          <Route path="*" element={<NotFoundPage />}></Route>
+          <Route path="*" element={<HomePage />}></Route>
         </Route>
       </Routes>
     </>
