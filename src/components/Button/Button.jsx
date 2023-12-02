@@ -1,6 +1,14 @@
 import PropTypes from 'prop-types';
 
-const Button = ({ text, className, type, onClick }) => {
+const Button = ({ text, className, type, onClick, href }) => {
+  if (href) {
+    return (
+      <a href={href} className={className} onClick={onClick}>
+        {text}
+      </a>
+    );
+  }
+
   return (
     <button className={className} type={type} onClick={onClick}>
       {text}
@@ -15,4 +23,5 @@ Button.propTypes = {
   className: PropTypes.string,
   type: PropTypes.string,
   onClick: PropTypes.func,
+  href: PropTypes.string,
 };

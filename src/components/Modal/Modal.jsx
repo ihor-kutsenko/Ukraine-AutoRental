@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-// import PropTypes from 'prop-types';
 
 import SvgIcon from 'components/SvgIcon/SvgIcon';
 import CarModal from 'components/CarModal/CarModal';
@@ -15,11 +14,14 @@ const Modal = ({ onClose, car }) => {
       window.removeEventListener('keydown', closeModal);
     };
   });
+
   const closeModal = ({ target, currentTarget, code }) => {
     if (target === currentTarget || code === 'Escape') {
       onClose();
+      document.body.style.overflow = 'visible';
     }
   };
+  document.body.style.overflow = 'hidden';
 
   return createPortal(
     <div className={styles.overlay} onClick={closeModal}>

@@ -40,7 +40,7 @@ const CarItem = ({ car }) => {
       <li key={id} className={styles.listItem}>
         <div className={styles.wrapper}>
           <div className={styles.imgWrapper}>
-            <img src={img} alt="" className={styles.img} />
+            <img src={img} alt="car" className={styles.img} />
             <button
               type="button"
               className={styles.buttonSvg}

@@ -1,1 +1,103 @@
 @import '../../sass/styles.scss';
+
+.imgModal {
+  width: 461px;
+  height: 248px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.modelInfo {
+  margin-bottom: 8px;
+  @include font(18px, 500, 1.33);
+  color: $text-color;
+
+  .active {
+    color: $accent-color;
+  }
+}
+
+.supportText {
+  margin-bottom: 14px;
+  gap: 4px;
+  color: $text-info-color;
+  @include font(12px, 400, 1.5);
+}
+
+.textInfo::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin-right: 6px;
+  margin-left: 6px;
+  background-color: $vector-color;
+}
+
+.description {
+  margin-bottom: 24px;
+  @include font(14px, 400, 1.43);
+}
+
+.accessoriesWrapper {
+  margin-bottom: 24px;
+
+  .accessoriesTitle {
+    margin-bottom: 8px;
+    @include font(14px, 500, 1.43);
+  }
+
+  .accessoriesText {
+    color: $text-info-color;
+    @include font(12px, 400, 1.5);
+  }
+}
+
+.rentalWrapper {
+  margin-bottom: 24px;
+
+  .rentalTitle {
+    margin-bottom: 8px;
+    @include font(14px, 500, 1.43);
+    margin-bottom: 15px;
+  }
+
+  .rentalTextWrapper {
+    display: flex;
+    gap: 36px;
+    padding-left: 14px;
+
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+
+  .rentalText {
+    @include font(12px, 400, 1.5);
+    letter-spacing: -0.24px;
+    color: #363535;
+  }
+
+  .activeText {
+    @include font(12px, 600, 1.5);
+    letter-spacing: -0.24px;
+    color: $accent-color;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 50px;
+  width: 168px;
+  height: 44px;
+  border-radius: 12px;
+  @include font(14px, 600, 1.43);
+  color: #fff;
+  background-color: $accent-color;
+  transition: background-color $transition;
+  @include hover {
+    background-color: $hovered-color;
+  }
+}
