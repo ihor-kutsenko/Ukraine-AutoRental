@@ -1,13 +1,24 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Button from 'components/Button/Button';
 import SvgIcon from 'components/SvgIcon/SvgIcon';
 import Modal from 'components/Modal/Modal';
+
+import {
+  addToFavorites,
+  deleteFromFavorites,
+} from 'redux/favorites/favoritesSlice';
+import { selectFavorites } from 'redux/favorites/favoritesSelectors';
+
 import styles from './CarItem.module.scss';
 
 const CarItem = ({ car }) => {
-  const [favorites, setFavorites] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const dispatch = useDispatch();
+
+  const favoriteCars = useSelector(selectFavorites);
+
   const toggleModal = () => setShowModal(!showModal);
   const {
     id,
@@ -35,6 +46,14 @@ const CarItem = ({ car }) => {
     }
   };
 
+  const handleToggleFavorite = car => {
+    if (!favoriteCars.some(item => item.id === car.id)) {
+      dispatch(addToFavorites(car));
+    } else {
+      dispatch(deleteFromFavorites(car));
+    }
+  };
+
   return (
     <>
       <li key={id} className={styles.listItem}>
@@ -44,11 +63,9 @@ const CarItem = ({ car }) => {
             <button
               type="button"
               className={styles.buttonSvg}
-              onClick={() => {
-                setFavorites(!favorites);
-              }}
+              onClick={() => handleToggleFavorite(car)}
             >
-              {favorites ? (
+              {favoriteCars.some(item => item.id === car.id) ? (
                 <SvgIcon
                   className={styles.iconHeart}
                   iconId={'icon-heart-active'}

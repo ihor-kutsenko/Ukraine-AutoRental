@@ -1,13 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
-import { lazy } from 'react';
+// import { lazy } from 'react';
 
 import { appRoutes } from 'routes/routes';
 
-const SharedLayout = lazy(() =>
-  import('./components/SharedLayout/SharedLayout')
-);
-const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
+// const SharedLayout = lazy(() =>
+//   import('./components/SharedLayout/SharedLayout')
+// );
+// const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 
+import HomePage from 'pages/HomePage/HomePage';
+import SharedLayout from './components/SharedLayout/SharedLayout';
 const App = () => {
   return (
     <>

@@ -1,0 +1,10 @@
+@import '../../sass/styles.scss';
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  gap: 29px 50px;
+  text-align: center;
+}
