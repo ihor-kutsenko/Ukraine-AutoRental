@@ -51,7 +51,6 @@ const CatalogPage = () => {
       <Section>
         <FilterBar />
         {renderCarList()}
-
         {isShowBtn && (
           <Button
             type="button"
