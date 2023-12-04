@@ -1,14 +1,34 @@
 {
   "files": {
-    "main.css": "/Ukraine-AutoRental/static/css/main.c2d459e7.css",
-    "main.js": "/Ukraine-AutoRental/static/js/main.f38b247a.js",
+    "main.css": "/Ukraine-AutoRental/static/css/main.9ed4cfbc.css",
+    "main.js": "/Ukraine-AutoRental/static/js/main.c904d5ea.js",
+    "static/media/volkswagen-logo.png": "/Ukraine-AutoRental/static/media/volkswagen-logo.7f02b248f23a7c5fcb8a.png",
+    "static/media/toyota-logo.png": "/Ukraine-AutoRental/static/media/toyota-logo.d5f7b2df44f1d3158eea.png",
+    "static/media/lexus-logo.png": "/Ukraine-AutoRental/static/media/lexus-logo.0b26cd85db00b17ca9a0.png",
+    "static/media/mazda-logo.png": "/Ukraine-AutoRental/static/media/mazda-logo.e21f62fd5d37bd98548d.png",
+    "static/media/mercedes-benz-logo.png": "/Ukraine-AutoRental/static/media/mercedes-benz-logo.cde26c06a846bbb74485.png",
+    "static/media/nissan-logo.png": "/Ukraine-AutoRental/static/media/nissan-logo.e6feabe29ab0737bdc3c.png",
+    "static/media/skoda-logo.png": "/Ukraine-AutoRental/static/media/skoda-logo.3b1294ad349ba56e10df.png",
+    "static/media/volvo-logo.png": "/Ukraine-AutoRental/static/media/volvo-logo.ae8e19efe70670de8a4d.png",
+    "static/media/seat-logo.png": "/Ukraine-AutoRental/static/media/seat-logo.3e2af06ab5e673230929.png",
+    "static/media/land-rover-logo.png": "/Ukraine-AutoRental/static/media/land-rover-logo.96b9754cec1a6d588c89.png",
+    "static/media/bmw-logo.png": "/Ukraine-AutoRental/static/media/bmw-logo.6f5706479c0eff1656b2.png",
+    "static/media/audi-logo.png": "/Ukraine-AutoRental/static/media/audi-logo.34d2be9232ad1a508b42.png",
+    "static/media/kia-logo.png": "/Ukraine-AutoRental/static/media/kia-logo.bef3db45859abfd924f0.png",
+    "static/media/hyundai-logo.png": "/Ukraine-AutoRental/static/media/hyundai-logo.e91b852597f7eefbd0a7.png",
+    "static/media/renault-logo.png": "/Ukraine-AutoRental/static/media/renault-logo.b33e212ab90798af7f5c.png",
+    "static/media/opel-logo.png": "/Ukraine-AutoRental/static/media/opel-logo.f9a606044f801bcb9ec1.png",
+    "static/media/ford-logo.png": "/Ukraine-AutoRental/static/media/ford-logo.3d01bda56e0e144541cb.png",
+    "static/media/citroen-logo.png": "/Ukraine-AutoRental/static/media/citroen-logo.5dbbc035e3c0f44b2354.png",
+    "static/media/jaguar-logo.png": "/Ukraine-AutoRental/static/media/jaguar-logo.76f3618b1a3eeef7db34.png",
+    "static/media/logo-1.png": "/Ukraine-AutoRental/static/media/logo-1.b16db013321b93e91943.png",
     "static/media/sprite.svg": "/Ukraine-AutoRental/static/media/sprite.37679f9980fa1482c60c770fea3e7e8f.svg",
     "index.html": "/Ukraine-AutoRental/index.html",
-    "main.c2d459e7.css.map": "/Ukraine-AutoRental/static/css/main.c2d459e7.css.map",
-    "main.f38b247a.js.map": "/Ukraine-AutoRental/static/js/main.f38b247a.js.map"
+    "main.9ed4cfbc.css.map": "/Ukraine-AutoRental/static/css/main.9ed4cfbc.css.map",
+    "main.c904d5ea.js.map": "/Ukraine-AutoRental/static/js/main.c904d5ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2d459e7.css",
-    "static/js/main.f38b247a.js"
+    "static/css/main.9ed4cfbc.css",
+    "static/js/main.c904d5ea.js"
   ]
 }
