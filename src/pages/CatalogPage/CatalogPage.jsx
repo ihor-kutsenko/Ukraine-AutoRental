@@ -6,10 +6,10 @@ import Button from 'components/Button/Button';
 import FilterBar from 'components/FilterBar/FilterBar';
 import Section from 'components/Section/Section';
 
-import { setCatalogCars } from '../../redux/cars/CarsSlice';
 import { selectCars } from 'redux/cars/carsSelectors';
-import { setFilter } from 'redux/filter/filterSlice';
 import { selectFilter } from 'redux/filter/filterSelectors';
+import { setFilter } from 'redux/filter/filterSlice';
+import { fetchCars } from 'redux/cars/carsOperations';
 
 import styles from './CatalogPage.module.scss';
 
@@ -19,8 +19,8 @@ const CatalogPage = () => {
   const filteredCars = useSelector(selectFilter);
 
   useEffect(() => {
-    dispatch(setCatalogCars(cars));
-  }, [dispatch, cars]);
+    dispatch(fetchCars());
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(setFilter(filteredCars));
