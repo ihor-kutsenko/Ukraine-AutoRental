@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Ukraine-AutoRental/static/css/main.9ed4cfbc.css",
-    "main.js": "/Ukraine-AutoRental/static/js/main.c904d5ea.js",
+    "main.css": "/Ukraine-AutoRental/static/css/main.aacb14aa.css",
+    "main.js": "/Ukraine-AutoRental/static/js/main.9ae5b35d.js",
     "static/media/volkswagen-logo.png": "/Ukraine-AutoRental/static/media/volkswagen-logo.7f02b248f23a7c5fcb8a.png",
     "static/media/toyota-logo.png": "/Ukraine-AutoRental/static/media/toyota-logo.d5f7b2df44f1d3158eea.png",
     "static/media/lexus-logo.png": "/Ukraine-AutoRental/static/media/lexus-logo.0b26cd85db00b17ca9a0.png",
@@ -24,11 +24,11 @@
     "static/media/logo-1.png": "/Ukraine-AutoRental/static/media/logo-1.b16db013321b93e91943.png",
     "static/media/sprite.svg": "/Ukraine-AutoRental/static/media/sprite.37679f9980fa1482c60c770fea3e7e8f.svg",
     "index.html": "/Ukraine-AutoRental/index.html",
-    "main.9ed4cfbc.css.map": "/Ukraine-AutoRental/static/css/main.9ed4cfbc.css.map",
-    "main.c904d5ea.js.map": "/Ukraine-AutoRental/static/js/main.c904d5ea.js.map"
+    "main.aacb14aa.css.map": "/Ukraine-AutoRental/static/css/main.aacb14aa.css.map",
+    "main.9ae5b35d.js.map": "/Ukraine-AutoRental/static/js/main.9ae5b35d.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ed4cfbc.css",
-    "static/js/main.c904d5ea.js"
+    "static/css/main.aacb14aa.css",
+    "static/js/main.9ae5b35d.js"
   ]
 }
