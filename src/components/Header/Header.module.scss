@@ -1,0 +1,45 @@
+@import '../../sass/styles.scss';
+
+.logo {
+  width: 166px;
+  height: 44px;
+  border-radius: 12px;
+}
+
+.header {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+
+  margin-bottom: 20px;
+  gap: 20px;
+  border-bottom: 1px solid #94a3b8;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+
+  a {
+    padding: 8px 16px;
+    border-radius: 25px;
+    @include font(18px, 600, 1.11);
+    text-decoration: none;
+    color: $accent-color;
+    background-color: $input-background;
+  }
+}
+
+.active {
+  padding: 8px 16px;
+  border-radius: 25px;
+  @include font(18px, 600, 1.11);
+  text-decoration: none;
+  color: $background-color;
+  background-color: $accent-color;
+}

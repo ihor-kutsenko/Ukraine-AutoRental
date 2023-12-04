@@ -1,0 +1,35 @@
+@import '../../sass/styles.scss';
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 0 30px 35px;
+
+    transition: transform $transition;
+    transform: scale(1);
+    @include hover {
+      transform: scale(1.2);
+    }
+  }
+
+  img {
+    border-radius: 24px;
+    height: 120px;
+    width: 120px;
+    border: 1px solid $accent-color;
+    background-color: $input-background;
+  }
+
+  p {
+    @include font(18px, 600, 1.5);
+    color: $text-info-color;
+  }
+}

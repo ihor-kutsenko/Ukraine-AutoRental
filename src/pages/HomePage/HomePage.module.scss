@@ -1,0 +1,26 @@
+@import '../../sass/styles.scss';
+
+.title {
+  @include font(42px, 600, 1.11);
+  color: $accent-color;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 50px;
+  padding: 20px 50px;
+  width: 250px;
+  height: 48px;
+  border-radius: 16px;
+  @include font(18px, 600, 1.43);
+  color: #fff;
+  background-color: $accent-color;
+  transition: background-color $transition;
+  @include hover {
+    background-color: $hovered-color;
+  }
+}
