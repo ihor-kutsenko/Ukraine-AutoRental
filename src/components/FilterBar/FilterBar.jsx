@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import notifyOptions from 'NotifyOptions/NotifyOptions';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Button from 'components/Button/Button';
 import brands from '../../data/carsBrand';
@@ -11,9 +14,10 @@ import styles from './FilterBar.module.scss';
 const FilterBar = () => {
   const dispatch = useDispatch();
   const cars = useSelector(selectCars);
-  const [filteredCars, setFilteredCars] = useState([]);
   const [selectedBrand, setSelectedBrand] = useState('Select brand');
   const [selectedPrice, setSelectedPrice] = useState('To $');
+  const [minValue, setMinValue] = useState('');
+  const [maxValue, setMaxValue] = useState('');
 
   const handleSelectBrand = e => {
     setSelectedBrand(e.target.value);
@@ -22,9 +26,6 @@ const FilterBar = () => {
   const handleSelectPrice = e => {
     setSelectedPrice(e.target.value);
   };
-
-  const [minValue, setMinValue] = useState('');
-  const [maxValue, setMaxValue] = useState('');
 
   const rentalPrices = [];
   for (let i = 30; i <= 500; i += 10) {
@@ -53,13 +54,21 @@ const FilterBar = () => {
 
   const handleFilterSubmit = e => {
     e.preventDefault();
-    // if (
-    //   parseFloat(minValue.replace(',', '')) >
-    //   parseFloat(maxValue.replace(',', ''))
-    // ) {
-    //   alert('The first value must be less than or equal to the second value.');
-    //   return;
-    // }
+    if (
+      parseFloat(minValue.replace(',', '')) >
+      parseFloat(maxValue.replace(',', ''))
+    ) {
+      toast.error(
+        ` The first value must be less than or equal to the second value.`,
+        notifyOptions
+      );
+
+      return;
+    }
+
+    const minMileage = parseFloat(minValue.replace(',', '')) || 0;
+    const maxMileage = parseFloat(maxValue.replace(',', '')) || Infinity;
+
     let filteredByBrand = cars;
     if (selectedBrand !== 'Select brand') {
       filteredByBrand = cars.filter(car => car.make === selectedBrand);
@@ -71,14 +80,28 @@ const FilterBar = () => {
         car => parseFloat(car.rentalPrice.slice(1)) <= parseFloat(selectedPrice)
       );
     }
-    // setFilteredCars(cars.filter(car => car.make === selectedBrand));
 
-    dispatch(setFilter(filteredByPrice));
-    console.log(selectedBrand, selectedPrice);
+    const filteredByMileage = filteredByPrice.filter(car => {
+      const mileage = car.mileage;
+      return mileage >= minMileage && mileage <= maxMileage;
+    });
+
+    dispatch(setFilter([]));
+    dispatch(setFilter(filteredByMileage));
+
+    if (filteredByMileage.length === 0) {
+      toast.info(
+        `No cars found for the selected filters. Try different filters.`,
+        notifyOptions
+      );
+    }
   };
+
   const handleClearForm = () => {
     setSelectedBrand('Select brand');
     setSelectedPrice('To $');
+    setMinValue('');
+    setMaxValue('');
     dispatch(setFilter([]));
   };
 
@@ -130,7 +153,7 @@ const FilterBar = () => {
         </select>
       </div>
 
-      {/* <div>
+      <div>
         <p className={styles.labelText}>Car mileage / km</p>
         <div className={styles.inputWrapper}>
           <input
@@ -148,7 +171,7 @@ const FilterBar = () => {
           />
           <span className={styles.spanRight}>To: </span>
         </div>
-      </div> */}
+      </div>
       <Button
         text="Search"
         type="button"

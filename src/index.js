@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+import { ToastContainer } from 'react-toastify';
 
 import App from 'App';
 import Loader from 'components/Loader/Loader';
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <PersistGate loading={<Loader />} persistor={persistor}>
         <BrowserRouter basename="/Ukraine-AutoRental">
           <App />
+          <ToastContainer />
         </BrowserRouter>
       </PersistGate>
     </Provider>
