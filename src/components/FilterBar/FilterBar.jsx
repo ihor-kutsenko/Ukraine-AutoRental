@@ -1,11 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Button from 'components/Button/Button';
 import brands from '../../data/carsBrand';
+import { selectCars } from 'redux/cars/carsSelectors';
+import { setFilter } from 'redux/filter/filterSlice';
 
 import styles from './FilterBar.module.scss';
 
 const FilterBar = () => {
+  const dispatch = useDispatch();
+  const cars = useSelector(selectCars);
+  const [filteredCars, setFilteredCars] = useState([]);
+  const [selectedBrand, setSelectedBrand] = useState('Select brand');
+
+  const handleSelectBrand = e => {
+    setSelectedBrand(e.target.value);
+  };
   const [minValue, setMinValue] = useState('');
   const [maxValue, setMaxValue] = useState('');
 
@@ -36,21 +47,38 @@ const FilterBar = () => {
 
   const handleFilterSubmit = e => {
     e.preventDefault();
-    if (
-      parseFloat(minValue.replace(',', '')) >
-      parseFloat(maxValue.replace(',', ''))
-    ) {
-      alert('The first value must be less than or equal to the second value.');
-      return;
-    }
+    // if (
+    //   parseFloat(minValue.replace(',', '')) >
+    //   parseFloat(maxValue.replace(',', ''))
+    // ) {
+    //   alert('The first value must be less than or equal to the second value.');
+    //   return;
+    // }
+    dispatch(setFilter([]));
+    setFilteredCars(cars.filter(car => car.make === selectedBrand));
+
+    dispatch(setFilter(filteredCars));
+    console.log(selectedBrand);
   };
+  const handleClearForm = () => {
+    setSelectedBrand('Select brand');
+    dispatch(setFilter([]));
+  };
+
+  useEffect(() => {
+    dispatch(setFilter([]));
+  }, [dispatch]);
 
   return (
     <form className={styles.form}>
       <div>
         <p className={styles.labelText}>Car brand</p>
-        <div></div>
-        <select name="brands" className={styles.select}>
+        <select
+          name="brands"
+          className={styles.select}
+          value={selectedBrand}
+          onChange={handleSelectBrand}
+        >
           <option value="" className={styles.option}>
             Select brand
           </option>
@@ -62,7 +90,7 @@ const FilterBar = () => {
         </select>
       </div>
 
-      <div>
+      {/* <div>
         <p className={styles.labelText}>Price/ 1 hour</p>
         <select name="price" className={styles.newSelect}>
           <option value="" className={styles.option}>
@@ -98,11 +126,18 @@ const FilterBar = () => {
           />
           <span className={styles.spanRight}>To: </span>
         </div>
-      </div>
+      </div> */}
       <Button
         text="Search"
+        type="button"
         className={styles.buttonSearch}
         onClick={handleFilterSubmit}
+      />
+      <Button
+        text="Clear filter"
+        type="button"
+        className={styles.buttonClear}
+        onClick={handleClearForm}
       />
     </form>
   );

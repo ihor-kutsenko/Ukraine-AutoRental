@@ -109,3 +109,8 @@
     background-color: $hovered-color;
   }
 }
+
+.buttonClear {
+  @extend .buttonSearch;
+  width: 160px;
+}
