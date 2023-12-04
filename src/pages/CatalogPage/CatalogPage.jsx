@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import CarList from 'components/CarList/CarList';
@@ -17,10 +17,18 @@ const CatalogPage = () => {
   const dispatch = useDispatch();
   const cars = useSelector(selectCars);
   const filteredCars = useSelector(selectFilter);
+  const [isShowBtn, setIsShowBtn] = useState(true);
+  const [page, setPage] = useState(12);
 
   useEffect(() => {
     dispatch(fetchCars());
   }, [dispatch]);
+
+  useEffect(() => {
+    page >= cars.length || cars.length < 13
+      ? setIsShowBtn(false)
+      : setIsShowBtn(true);
+  }, [page, cars.length]);
 
   useEffect(() => {
     dispatch(setFilter(filteredCars));
@@ -30,8 +38,12 @@ const CatalogPage = () => {
     if (filteredCars.length > 0) {
       return <CarList cars={filteredCars} />;
     } else {
-      return <CarList cars={cars} />;
+      return <CarList cars={cars.slice(0, page)} />;
     }
+  };
+
+  const loadMore = () => {
+    setPage(prev => prev + 12);
   };
 
   return (
@@ -39,11 +51,15 @@ const CatalogPage = () => {
       <Section>
         <FilterBar />
         {renderCarList()}
-        <Button
-          type="button"
-          text="Load More"
-          className={styles.buttonLoadMore}
-        />
+
+        {isShowBtn && (
+          <Button
+            type="button"
+            text="Load More"
+            className={styles.buttonLoadMore}
+            onClick={loadMore}
+          />
+        )}
       </Section>
     </>
   );
