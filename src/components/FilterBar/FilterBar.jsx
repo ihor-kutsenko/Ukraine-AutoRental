@@ -13,10 +13,16 @@ const FilterBar = () => {
   const cars = useSelector(selectCars);
   const [filteredCars, setFilteredCars] = useState([]);
   const [selectedBrand, setSelectedBrand] = useState('Select brand');
+  const [selectedPrice, setSelectedPrice] = useState('To $');
 
   const handleSelectBrand = e => {
     setSelectedBrand(e.target.value);
   };
+
+  const handleSelectPrice = e => {
+    setSelectedPrice(e.target.value);
+  };
+
   const [minValue, setMinValue] = useState('');
   const [maxValue, setMaxValue] = useState('');
 
@@ -54,14 +60,25 @@ const FilterBar = () => {
     //   alert('The first value must be less than or equal to the second value.');
     //   return;
     // }
-    dispatch(setFilter([]));
-    setFilteredCars(cars.filter(car => car.make === selectedBrand));
+    let filteredByBrand = cars;
+    if (selectedBrand !== 'Select brand') {
+      filteredByBrand = cars.filter(car => car.make === selectedBrand);
+    }
 
-    dispatch(setFilter(filteredCars));
-    console.log(selectedBrand);
+    let filteredByPrice = filteredByBrand;
+    if (selectedPrice !== 'To $') {
+      filteredByPrice = filteredByBrand.filter(
+        car => parseFloat(car.rentalPrice.slice(1)) <= parseFloat(selectedPrice)
+      );
+    }
+    // setFilteredCars(cars.filter(car => car.make === selectedBrand));
+
+    dispatch(setFilter(filteredByPrice));
+    console.log(selectedBrand, selectedPrice);
   };
   const handleClearForm = () => {
     setSelectedBrand('Select brand');
+    setSelectedPrice('To $');
     dispatch(setFilter([]));
   };
 
@@ -90,10 +107,15 @@ const FilterBar = () => {
         </select>
       </div>
 
-      {/* <div>
+      <div>
         <p className={styles.labelText}>Price/ 1 hour</p>
-        <select name="price" className={styles.newSelect}>
-          <option value="" className={styles.option}>
+        <select
+          name="price"
+          value={selectedPrice}
+          className={styles.newSelect}
+          onChange={handleSelectPrice}
+        >
+          <option value="To $" className={styles.option}>
             To $
           </option>
           {rentalPrices.map(rentalPrice => (
@@ -108,7 +130,7 @@ const FilterBar = () => {
         </select>
       </div>
 
-      <div>
+      {/* <div>
         <p className={styles.labelText}>Car mileage / km</p>
         <div className={styles.inputWrapper}>
           <input
