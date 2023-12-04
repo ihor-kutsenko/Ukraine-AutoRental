@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Ukraine-AutoRental/static/css/main.bcec00d9.css",
-    "main.js": "/Ukraine-AutoRental/static/js/main.22733e60.js",
+    "main.css": "/Ukraine-AutoRental/static/css/main.c2d459e7.css",
+    "main.js": "/Ukraine-AutoRental/static/js/main.f38b247a.js",
     "static/media/sprite.svg": "/Ukraine-AutoRental/static/media/sprite.37679f9980fa1482c60c770fea3e7e8f.svg",
     "index.html": "/Ukraine-AutoRental/index.html",
-    "main.bcec00d9.css.map": "/Ukraine-AutoRental/static/css/main.bcec00d9.css.map",
-    "main.22733e60.js.map": "/Ukraine-AutoRental/static/js/main.22733e60.js.map"
+    "main.c2d459e7.css.map": "/Ukraine-AutoRental/static/css/main.c2d459e7.css.map",
+    "main.f38b247a.js.map": "/Ukraine-AutoRental/static/js/main.f38b247a.js.map"
   },
   "entrypoints": [
-    "static/css/main.bcec00d9.css",
-    "static/js/main.22733e60.js"
+    "static/css/main.c2d459e7.css",
+    "static/js/main.f38b247a.js"
   ]
 }
