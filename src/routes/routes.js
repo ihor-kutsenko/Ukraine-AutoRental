@@ -1,11 +1,3 @@
-// import { lazy } from 'react';
-
-// const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
-// const CatalogPage = lazy(() => import('../pages/CatalogPage/CatalogPage'));
-// const FavoritesPage = lazy(() =>
-//   import('../pages/FavoritesPage/FavoritesPage')
-// );
-
 import HomePage from 'pages/HomePage/HomePage';
 import FavoritesPage from 'pages/FavoritesPage/FavoritesPage';
 import CatalogPage from 'pages/CatalogPage/CatalogPage';
