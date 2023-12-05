@@ -1,9 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-
 import { appRoutes } from 'routes/routes';
 
 import HomePage from 'pages/HomePage/HomePage';
 import SharedLayout from './components/SharedLayout/SharedLayout';
+import ScrollToUp from 'components/ScrollToUp/ScrollToUp';
+
 const App = () => {
   return (
     <>
@@ -15,6 +16,8 @@ const App = () => {
           <Route path="*" element={<HomePage />}></Route>
         </Route>
       </Routes>
+
+      <ScrollToUp />
     </>
   );
 };
