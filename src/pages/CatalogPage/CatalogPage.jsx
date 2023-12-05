@@ -5,8 +5,9 @@ import CarList from 'components/CarList/CarList';
 import Button from 'components/Button/Button';
 import FilterBar from 'components/FilterBar/FilterBar';
 import Section from 'components/Section/Section';
+import Loader from 'components/Loader/Loader';
 
-import { selectCars } from 'redux/cars/carsSelectors';
+import { selectCars, selectIsLoading } from 'redux/cars/carsSelectors';
 import { selectFilter } from 'redux/filter/filterSelectors';
 import { setFilter } from 'redux/filter/filterSlice';
 import { fetchCars } from 'redux/cars/carsOperations';
@@ -17,6 +18,7 @@ const CatalogPage = () => {
   const dispatch = useDispatch();
   const cars = useSelector(selectCars);
   const filteredCars = useSelector(selectFilter);
+  const isLoading = useSelector(selectIsLoading);
   const [isShowBtn, setIsShowBtn] = useState(true);
   const [page, setPage] = useState(12);
 
@@ -50,6 +52,7 @@ const CatalogPage = () => {
     <>
       <Section>
         <FilterBar />
+        {isLoading && <Loader />}
         {renderCarList()}
         {isShowBtn && (
           <Button

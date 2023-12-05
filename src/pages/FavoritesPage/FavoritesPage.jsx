@@ -7,6 +7,7 @@ import CarItem from 'components/CarItem/CarItem';
 import Section from 'components/Section/Section';
 import Container from 'components/Container/Container';
 import Button from 'components/Button/Button';
+
 import { selectFavorites } from 'redux/favorites/favoritesSelectors';
 
 import styles from './FavoritesPages.module.scss';
