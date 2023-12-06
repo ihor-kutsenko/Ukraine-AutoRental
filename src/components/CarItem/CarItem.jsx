@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Button from 'components/Button/Button';
 import SvgIcon from 'components/SvgIcon/SvgIcon';
 import Modal from 'components/Modal/Modal';
+import defaultImg from '../../images/car7.jpeg';
 
 import {
   addToFavorites,
@@ -33,6 +34,8 @@ const CarItem = ({ car }) => {
     accessories,
   } = car;
 
+  const imageUrl = img || defaultImg;
+
   const city = address.split(',')[1];
   const country = address.split(',')[2];
   const getAccessoriesText = () => {
@@ -59,7 +62,7 @@ const CarItem = ({ car }) => {
       <li key={id} className={styles.listItem}>
         <div className={styles.wrapper}>
           <div className={styles.imgWrapper}>
-            <img src={img} alt="car" className={styles.img} />
+            <img src={imageUrl} alt="car" className={styles.img} />
             <button
               type="button"
               className={styles.buttonSvg}

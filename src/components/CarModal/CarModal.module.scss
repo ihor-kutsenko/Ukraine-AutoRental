@@ -7,6 +7,11 @@
   margin-bottom: 14px;
 }
 
+.defaultImg {
+  @extend .imgModal;
+  object-fit: cover;
+}
+
 .modelInfo {
   margin-bottom: 8px;
   @include font(18px, 500, 1.33);

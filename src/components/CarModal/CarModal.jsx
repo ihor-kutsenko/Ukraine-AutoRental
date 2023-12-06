@@ -1,5 +1,6 @@
 import styles from './CarModal.module.scss';
 import Button from 'components/Button/Button';
+import defaultImg from '../../images/car7.jpeg';
 
 const CarModal = ({ car }) => {
   const {
@@ -20,6 +21,9 @@ const CarModal = ({ car }) => {
     mileage,
   } = car;
 
+  const imageUrl = img || defaultImg;
+  const imgClass = img ? styles.imgModal : styles.defaultImg;
+
   const city = address.split(',')[1];
   const country = address.split(',')[2];
 
@@ -30,7 +34,7 @@ const CarModal = ({ car }) => {
 
   return (
     <div>
-      <img src={img} alt="car" className={styles.imgModal} />
+      <img src={imageUrl} alt="car" className={imgClass} />
       <div className={styles.modelInfo}>
         <span>{make} </span>
         <span className={styles.active}>{model}, </span>
